@@ -30,12 +30,12 @@ module.exports = {
           /anime/i.test(line) && !/hanime/i.test(line) && !/Total\s*anime/i.test(line)
         );
         if (!animeCategories.length) {
-          return api.sendMessage("❌ | No anime categories found.", event.threadID, event.messageID);
+          return api.sendMessage("❌ | Piw Piw Chat Bot No anime categories found.", event.threadID, event.messageID);
         }
         return api.sendMessage(animeCategories.join("\n"), event.threadID, event.messageID);
       }
 
-      const loadingMessage = await message.reply("🐤 | 𝗟𝗼𝗮𝗱𝗶𝗻𝗴 𝗿𝗮𝗻𝗱𝗼𝗺 𝗮𝗻𝗶𝗺𝗲 𝘃𝗶𝗱𝗲𝗼...𝗣𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁..!!");
+      const loadingMessage = await message.reply("🐤 | 𝗣𝗶𝘄 𝗣𝗶𝘄 𝗖𝗵𝗮𝘁 𝗕𝗼𝘁 𝗟𝗼𝗮𝗱𝗶𝗻𝗴 𝗿𝗮𝗻𝗱𝗼𝗺 𝗮𝗻𝗶𝗺𝗲 𝘃𝗶𝗱𝗲𝗼...𝗣𝗹𝗲𝗮𝘀𝗲 𝘄𝗮𝗶𝘁..!!");
 
       setTimeout(() => {
         api.unsendMessage(loadingMessage.messageID);
@@ -44,7 +44,7 @@ module.exports = {
       const apiUrl = await mahmud();
       const res = await axios.get(`${apiUrl}/api/album/videos/anime?userID=${event.senderID}`);
       if (!res.data.success || !res.data.videos.length)
-        return api.sendMessage("❌ | No videos found.", event.threadID, event.messageID);
+        return api.sendMessage("❌ | Piw Piw Chat Bot No videos found.", event.threadID, event.messageID);
 
       const url = res.data.videos[Math.floor(Math.random() * res.data.videos.length)];
       const filePath = path.join(__dirname, "temp_video.mp4");
@@ -61,7 +61,7 @@ module.exports = {
 
       writer.on("finish", () => {
         api.sendMessage({
-          body: "✨ | 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐚𝐧𝐢𝐦𝐞 𝐯𝐢𝐝𝐞𝐨",
+          body: "✨ | 𝐏𝐢𝐰 𝐏𝐢𝐰 𝐂𝐡𝐚𝐭 𝐁𝐨𝐭 𝐇𝐞𝐫𝐞'𝐬 𝐲𝐨𝐮𝐫 𝐚𝐧𝐢𝐦𝐞 𝐯𝐢𝐝𝐞𝐨",
           attachment: fs.createReadStream(filePath)
         }, event.threadID, () => fs.unlinkSync(filePath), event.messageID);
       });
@@ -71,7 +71,7 @@ module.exports = {
       });
     } catch (e) {
       console.error("ERROR:", e);
-      api.sendMessage("❌ | Failed to fetch or send video.", event.threadID, event.messageID);
+      api.sendMessage("❌ | Piw Piw Chat Bot Failed to fetch or send video.", event.threadID, event.messageID);
     }
   }
 };

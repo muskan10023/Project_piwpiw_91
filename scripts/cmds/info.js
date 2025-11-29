@@ -55,7 +55,7 @@ module.exports = {
     await new Promise(resolve => setTimeout(resolve, 100));
     const ping = Date.now() - start;
 
-    const photoUrl = "https://i.imgur.com/Wq8TViG.png ";
+    const photoUrl = "https://ibb.co.com/ZphtWqHr ";
 
     const body = `
 ╭─ <𝐎𝐖𝐍𝐄𝐑  𝐈𝐍𝐅𝐎> ─╮

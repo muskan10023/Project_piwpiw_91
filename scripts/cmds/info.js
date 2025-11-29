@@ -55,7 +55,7 @@ module.exports = {
     await new Promise(resolve => setTimeout(resolve, 100));
     const ping = Date.now() - start;
 
-    const photoUrl = "<!----><div style="text-align: center;"><a href="https://acosbot.com/en/blog/top-5-ways-to-make-money-on-amazon-a-starter-guide/" title="Eselt - amazon kdp" target="_blank"><img src="https://img.eselt.de/img/18968416_OftNfCBVVN2USeTH/ad.jpg" style="margin-bottom: 16px;"></a><!----><!----></div>   ";
+    const photoUrl = "https://i.imgur.com/Wq8TViG.png ";
 
     const body = `
 ╭─ <𝐎𝐖𝐍𝐄𝐑  𝐈𝐍𝐅𝐎> ─╮

@@ -21,7 +21,7 @@ module.exports = {
       noTag: "Bạn phải tag người bạn muốn tát"
     },
     en: {
-      noTag: "You must tag the person you want to slap"
+      noTag: "আবাল এর বাচ্চা যারে থাপ্পড় দিবি অরে মেনশন দে😡"
     }
   },
 
